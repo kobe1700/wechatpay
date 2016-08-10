@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.haogre.pay</groupId>
+	<artifactId>wechat</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>wechat Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>wechat</finalName>
+		<pluginManagement>
+			<!--配置Jetty -->
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-maven-plugin</artifactId>
+					<version>9.2.17.v20160517</version>
+					<configuration>
+						<httpConnector>
+							<port>8080</port>
+						</httpConnector>
+						<!-- 本地装载contextXml，来解决未配置事务或数据库造成启动时等待时间过长 -->
+						<contextXml>${project.basedir}/src/main/resources/jetty-deploy.xml</contextXml>
+						<webApp>
+							<contextPath>/home</contextPath>
+							<!-- <descriptor>${project.basedir}/src/over/here/web.xml</descriptor> -->
+							<!-- <jettyEnvXml>${project.basedir}/src/over/here/jetty-env.xml</jettyEnvXml> -->
+							<!-- <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor> -->
+						</webApp>
+
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.3</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- 拷贝依赖的jar包到lib目录 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>
+								${project.build.directory}/lib
+							</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- <plugin> <artifactId>maven-assembly-plugin</artifactId> <configuration> 
+				<appendAssemblyId>false</appendAssemblyId> <descriptors> <descriptor>src/main/assemble/package.xml</descriptor> 
+				</descriptors> </configuration> <executions> <execution> <id>make-assembly</id> 
+				<phase>package</phase> <goals> <goal>single</goal> </goals> </execution> 
+				</executions> </plugin> -->
+		</plugins>
+	</build>
+
+</project>
