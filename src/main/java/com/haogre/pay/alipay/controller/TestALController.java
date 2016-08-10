@@ -1,4 +1,4 @@
-package com.haogre.wechat.controller;
+package com.haogre.pay.alipay.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @description TestController4Test
  *
  */
-@RequestMapping(value="/test")
+@RequestMapping(value="/testAL")
 @Controller
-public class TestController {
+public class TestALController {
 
 }
