@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @description TestController4Test
  *
  */
-@RequestMapping(value="/testWeChat")
+@RequestMapping(value="")
 @Controller
 public class TestWXController {
 
+	@RequestMapping(value="/test")
+	public String test(){
+		return "/wechat/test";
+	}
 }
