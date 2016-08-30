@@ -31,8 +31,9 @@ import org.xml.sax.SAXException;
 import com.alibaba.fastjson.JSON;
 
 /**
- * 与微信支付服务器HTTP请求交互
- * @author Gjh
+ * @author haoz
+ * 
+ * @date 2016-8-30
  *
  */
 @SuppressWarnings("deprecation")

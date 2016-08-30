@@ -118,7 +118,7 @@ public class WeChatPayController{
 	 */
 	@RequestMapping(value="/toPay/{orderId}")
 	public String toPay(@PathVariable Long orderId,HttpServletRequest request,  HttpServletResponse response){
-		String orginUrl = "http://www.xxgj365.com/home/wechatpay/"+orderId;
+		String orginUrl = "http://www.fuckBaidu.com/home/xxx"+orderId;
 		String encodeUrl = URLEncoder.encode(orginUrl);
 		String resultUrl = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdb6a4f2cf35d02fd&redirect_uri="+encodeUrl+"&response_type=code&scope=snsapi_base&state="+orderId+"#wechat_redirect";
 		logger.info(resultUrl);
@@ -143,7 +143,7 @@ public class WeChatPayController{
 		
 		model.addAttribute("payMainId", "20160830110001");//FIXME 测试订单id
 	
-		model.addAttribute("openId", "wxdb6a4f2cf35d02fd");//FIXME 商户id 替换为自己的订单id
+		model.addAttribute("openId", "asdfasdfasdfa8888");//FIXME 商户id 替换为自己的订单id
 		
 		
 		//调用微信支付统一下单接口

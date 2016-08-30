@@ -1,8 +1,10 @@
 package com.haogre.pay.wechat.utils;
 
 /**
- * Unicode编码转换成中文
- * @author GongJunhao
+ * @author haoz
+ * 
+ * @date 2016-8-30
+ *
  */
 public class UnicodeDecoder {
 	/**

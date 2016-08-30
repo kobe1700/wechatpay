@@ -19,9 +19,10 @@ import org.apache.commons.httpclient.ConnectTimeoutException;
 import org.apache.commons.httpclient.params.HttpConnectionParams;  
 import org.apache.commons.httpclient.protocol.ProtocolSocketFactory;  
   
-  
 /**
- * @author haoz 2016-6-3 15:13:30
+ * @author haoz
+ * 
+ * @date 2016-8-30
  *
  */
 public class MySSLProtocolSocketFactory implements ProtocolSocketFactory {  

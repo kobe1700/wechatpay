@@ -5,10 +5,10 @@ import java.io.Serializable;
 import com.alibaba.fastjson.JSONObject;
 
 /**
- * 通用web返回json格式，含有状态信息
+ * @author haoz
  * 
- * @author mengjingji
- * @date 2015年6月22日
+ * @date 2016-8-30
+ *
  */
 public class JsonResult implements Serializable {
 

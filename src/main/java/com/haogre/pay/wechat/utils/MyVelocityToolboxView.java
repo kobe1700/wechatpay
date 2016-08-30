@@ -10,7 +10,12 @@ import org.apache.velocity.tools.Scope;
 import org.apache.velocity.tools.ToolManager;
 import org.apache.velocity.tools.view.ViewToolContext;
 import org.springframework.web.servlet.view.velocity.VelocityToolboxView;
-
+/**
+ * @author haoz
+ * 
+ * @date 2016-8-30
+ *
+ */
 public class MyVelocityToolboxView extends VelocityToolboxView {
 
     @Override

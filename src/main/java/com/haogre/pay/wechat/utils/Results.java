@@ -1,5 +1,10 @@
 package com.haogre.pay.wechat.utils;
-
+/**
+ * @author haoz
+ * 
+ * @date 2016-8-30
+ *
+ */
 public class Results {
 //  操作结果
 	public static final int RESULT_CODE_SUCCESS = 0;

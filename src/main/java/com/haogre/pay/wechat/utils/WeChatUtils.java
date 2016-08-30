@@ -4,7 +4,12 @@ import org.apache.commons.lang.StringUtils;
 
 import com.alibaba.fastjson.JSONObject;
 
-
+/**
+ * @author haoz
+ * 
+ * @date 2016-8-30
+ *
+ */
 public class WeChatUtils {
 	
 	//通过code获取openId

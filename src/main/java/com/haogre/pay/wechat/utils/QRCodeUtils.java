@@ -14,12 +14,10 @@ import com.google.zxing.EncodeHintType;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 /**
- * 二维码生成Demo
+ * @author haoz
  * 
- * @author Gjh
- *         <p>
- *         参见<a href="https://github.com/kenglxn/QRGen">QRGen</a>
- *         </p>
+ * @date 2016-8-30
+ *
  */
 public class QRCodeUtils {
 
