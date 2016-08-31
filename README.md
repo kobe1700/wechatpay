@@ -1,4 +1,4 @@
-# wechatpay
+# wechatpay   微信支付 demo 公众号支付  二维码支付  h5支付
 wechat/QR+JSAPI/pay
 ### today is 2016-8-10 11:11:11 , i will add the git-ingore @ night!
 
